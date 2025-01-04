@@ -1,0 +1,81 @@
+:root {
+    --font-family: "Inter", serif;
+    
+    --color-background: rgb(251, 254, 251);
+    --color-text: rgb(40, 39, 40);
+    --color-text-light:  rgb(236, 233, 233);
+    --color-accent: rgb(0, 108, 172);
+    --color-line: rgb(236, 233, 233);
+    --color-code: rgb(235, 236, 235);
+
+    --width-desktop: 52rem;
+    --width-tablet: 46rem;
+    --width-mobile: 100%;
+    
+    --spacing-xxs: 0.25rem;   /* 4px */
+    --spacing-xs: 0.5rem;     /* 8px */
+    --spacing-sm: 0.75rem;    /* 12px */
+    --spacing-md: 1rem;       /* 16px */
+    --spacing-lg: 1.5rem;     /* 24px */
+    --spacing-xl: 2rem;       /* 32px */
+    --spacing-xxl: 3rem;      /* 48px */
+
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --font-2xl: 2rem;
+    --font-3xl: 3rem;
+}   
+
+html[data-theme="dark"] {
+    --color-background: rgb(47, 55, 65);
+    --color-text: rgb(230, 230, 230);
+    --color-text-light: rgb(174, 177, 180);
+    --color-accent: rgb(26, 217, 217);
+    --color-line: rgb(59, 70, 85);
+    --color-code: rgb(59, 70, 83);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: var(--font-family);
+    font-size: var(--font-md);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.astro-code, .astro-code span {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+html[data-theme="dark"] {
+    .astro-code,
+    .astro-code span {
+        color: var(--shiki-dark) !important;
+        background-color: var(--shiki-dark-bg) !important;
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
+}
+
+code:not(pre code) {
+    border-radius: 0.25rem;
+    background-color: var(--color-code);
+    padding: 0.25rem;
+    font-weight: 600;
+    font-size: var(--font-xs);
+    font-style: italic;
+}

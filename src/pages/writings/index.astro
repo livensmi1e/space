@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import PostList from "../../components/PostList.astro";
+import Paginator from "../../components/Paginator.astro";
+
+import { getCollection } from "astro:content";
+
+interface Writing {
+    id: string;
+    date: string;
+    title: string;
+}
+
+let writingsWithTag: { [key: string]: Writing[] } = {};
+const writings = await getCollection("writing");
+const tags = [...new Set(writings.map((writing) => writing.data.tags).flat())];
+tags.forEach((tag: string) => {
+    writingsWithTag[tag] = writings
+        .filter((writing) => writing.data.tags.includes(tag))
+        .map((writing) => ({
+            title: writing.data.title,
+            date: writing.data.date,
+            id: writing.id,
+        }));
+});
+---
+
+<BaseLayout>
+    <div class="content">
+        <h2 class="title">Writings</h2>
+        {
+            tags.map((tag) => (
+                <PostList tag={tag} writings={writingsWithTag[tag]} />
+            ))
+        }
+    </div>
+    <Paginator />
+</BaseLayout>
+
+<style>
+    .content {
+        padding-top: var(--spacing-lg);
+    }
+
+    .title {
+        margin-bottom: var(--spacing-xl);
+    }
+</style>

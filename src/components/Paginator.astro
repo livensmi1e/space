@@ -1,0 +1,63 @@
+---
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+const prevPage =
+    currentPage > 2
+        ? `${baseUrl}/${currentPage - 1}`
+        : currentPage == 2
+          ? "/"
+          : null;
+const nextPage =
+    currentPage < totalPages ? `${baseUrl}/${currentPage + 1}` : null;
+---
+
+<section class="paginator">
+    <a
+        href={prevPage}
+        class=`paginator__nav ${currentPage <= 1 ? "paginator__nav--disable" : ""}`
+    >
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Prev</span>
+    </a>
+    <span>{currentPage} / {totalPages}</span>
+    <a
+        href={nextPage}
+        class=`paginator__nav ${currentPage >= totalPages ? "paginator__nav--disable" : ""}`
+    >
+        <span>Next</span>
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</section>
+
+<style>
+    .paginator {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+    }
+
+    .paginator__nav {
+        display: flex;
+        gap: var(--spacing-xs);
+    }
+
+    .paginator__nav--disable {
+        opacity: 0.6;
+    }
+
+    .paginator__nav--disable:hover {
+        color: var(--color-text) !important;
+        cursor: default;
+    }
+
+    .paginator__nav i {
+        padding-top: 0.34rem;
+    }
+
+    .paginator__nav:hover {
+        color: var(--color-accent);
+    }
+</style>

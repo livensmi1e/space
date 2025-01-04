@@ -1,0 +1,115 @@
+---
+import BaseLayout from "./Base.astro";
+
+const { meta } = Astro.props;
+---
+
+<BaseLayout>
+    <div class="markdown">
+        <h1 class="markdown__title">{meta.data.title}</h1>
+        <div class="markdown__meta">
+            <span class="meta__icon">
+                <i class="fa-solid fa-calendar-days"></i>
+            </span>
+            <span>Written: </span>
+            <span>{meta.data.date}</span>
+            <span>|</span>
+            <span>{meta.data.time}</span>
+        </div>
+        <p class="markdown__desc">
+            {meta.data.description}
+        </p>
+        <slot />
+    </div>
+</BaseLayout>
+
+<style is:global>
+    .markdown {
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .markdown ul {
+        padding-left: var(--spacing-md);
+        margin-top: var(--spacing-xs);
+        list-style-position: inside;
+    }
+
+    .markdown li {
+        margin: var(--spacing-xs) 0;
+    }
+
+    .markdown li::marker {
+        color: var(--color-accent);
+    }
+
+    .markdown details {
+        margin-top: var(--spacing-xs);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .markdown__title {
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-xs);
+        font-size: var(--font-xl);
+    }
+
+    .markdown__meta {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        font-size: var(--font-md);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .markdown__desc {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .meta__icon {
+        font-size: var(--font-lg);
+    }
+
+    .markdown h2 {
+        font-size: var(--font-xl);
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .markdown h3 {
+        font-size: var(--font-lg);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        font-style: italic;
+    }
+
+    .markdown pre {
+        font-size: 0.9em;
+        padding: var(--spacing-md);
+        margin: var(--spacing-lg) 0;
+        border-radius: 0.375em;
+        border: 1px solid rgb(210, 208, 208);
+    }
+
+    .markdown pre code {
+        font-size: 0.9em;
+    }
+
+    .markdown blockquote {
+        border-top-right-radius: 0.375em;
+        border-bottom-right-radius: 0.375rem;
+        background-color: #60a5fa0d;
+        border-inline-start: 3px solid #60a5fa;
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    @media (max-width: 768px) {
+        .markdown__meta {
+            gap: var(--spacing-xxs);
+        }
+
+        .meta__icon {
+            font-size: var(--font-md);
+        }
+    }
+</style>

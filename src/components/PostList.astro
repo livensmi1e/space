@@ -1,0 +1,56 @@
+---
+const { writings, tag } = Astro.props;
+---
+
+<section class="writings">
+    <h3 class="writings__tag">#{tag}</h3>
+    <div class="writings__list">
+        {
+            writings.map((writing: any) => (
+                <div class="writings__item">
+                    <span class="item__date">{writing.date}</span>
+                    <span>
+                        <a href={`/writings/${writing.id}`}>{writing.title}</a>
+                    </span>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+    .writings {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .writings__tag {
+        margin-bottom: var(--spacing-md);
+        font-size: var(--font-lg);
+    }
+
+    .writings__list {
+        border-left: 1.5px solid var(--color-line);
+    }
+
+    .writings__item {
+        padding: var(--spacing-xs) var(--spacing-lg);
+        margin-left: -1.5px;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-lg);
+        /* border-left: 3px solid transparent; */
+    }
+
+    .writings__item:hover {
+        border-left: 3px solid var(--color-text);
+    }
+
+    .writings__item a:hover {
+        color: var(--color-accent);
+    }
+
+    .item__date {
+        font-size: var(--font-sm);
+        color: #888;
+    }
+</style>

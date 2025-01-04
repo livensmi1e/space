@@ -1,0 +1,75 @@
+---
+const { title, date, desc, slug, time } = Astro.props;
+---
+
+<article class="preview">
+    <h3 class="preview__title">
+        <a href={`/writings/${slug}`}>
+            {title}
+        </a>
+    </h3>
+
+    <div class="preview__meta">
+        <span>
+            <i class="fa-solid fa-calendar-days"></i>
+        </span>
+        <span>{date}</span>
+        <span>|</span>
+        <span>{time}</span>
+    </div>
+    <p class="preview__text">
+        {desc}
+    </p>
+    <p class="rm__link">
+        <a href={`/writings/${slug}`}>Read more</a>
+    </p>
+</article>
+
+<style>
+    .preview {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .preview__title {
+        font-size: var(--font-xl);
+        font-weight: 600;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .preview__title a:hover {
+        color: var(--color-accent);
+    }
+
+    .preview__meta {
+        font-weight: 500;
+        margin-bottom: var(--spacing-sm);
+        display: flex;
+        gap: var(--spacing-sm);
+    }
+
+    .preview__text {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .rm__link {
+        text-align: right;
+    }
+
+    .rm__link a {
+        color: rgb(145, 144, 145);
+    }
+
+    .rm__link a:hover {
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: var(--color-text);
+        text-underline-offset: 4px;
+        text-decoration-thickness: 1.5px;
+    }
+
+    @media (max-width: 768px) {
+        .preview__title {
+            font-size: var(--font-lg);
+        }
+    }
+</style>

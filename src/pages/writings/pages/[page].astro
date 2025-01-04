@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../../layouts/Base.astro";
+import Hero from "../../../components/Hero.astro";
+import Divider from "../../../components/Divider.astro";
+import PostPreview from "../../../components/PostPreview.astro";
+import Paginator from "../../../components/Paginator.astro";
+
+import { getCollection } from "astro:content";
+import { paginate, ITEMS_PER_PAGE } from "../../../scripts/pagination.js";
+
+export async function getStaticPaths() {
+    const writings = await getCollection("writing");
+    const totalPages = Math.ceil(writings.length / ITEMS_PER_PAGE);
+    return Array.from({ length: totalPages }, (_, i) => ({
+        params: { page: (i + 1).toString() },
+    }));
+}
+
+const writings = await getCollection("writing");
+const { page } = Astro.params;
+
+const currentPage = Number(page) || 1;
+
+const { paginatedItems, totalPages } = paginate(
+    writings,
+    currentPage,
+    ITEMS_PER_PAGE
+);
+
+if (currentPage < 1 || currentPage > totalPages) {
+    throw new Response(null, { status: 404 });
+}
+---
+
+<BaseLayout>
+    <Hero />
+    <Divider />
+    {
+        paginatedItems.map((writing: any, index: number) => (
+            <>
+                <PostPreview
+                    slug={writing.id}
+                    title={writing.data.title}
+                    date={writing.data.date}
+                    time={writing.data.time}
+                    desc={writing.data.description}
+                />
+                {index !== writings.length - 1 && <Divider />}
+            </>
+        ))
+    }
+    <Paginator
+        currentPage={currentPage}
+        totalPages={totalPages}
+        baseUrl="/writings/pages"
+    />
+</BaseLayout>

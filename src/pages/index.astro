@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Divider from "../components/Divider.astro";
+import PostPreview from "../components/PostPreview.astro";
+import Paginator from "../components/Paginator.astro";
+
+import { getCollection } from "astro:content";
+import { paginate, ITEMS_PER_PAGE } from "../scripts/pagination";
+
+const writings = await getCollection("writing");
+
+const currentPage = 1;
+
+const { paginatedItems, totalPages } = paginate(
+    writings,
+    currentPage,
+    ITEMS_PER_PAGE
+);
+---
+
+<BaseLayout>
+    <Hero />
+    <Divider />
+    {
+        paginatedItems.map((writing: any, index: number) => (
+            <>
+                <PostPreview
+                    slug={writing.id}
+                    title={writing.data.title}
+                    date={writing.data.date}
+                    time={writing.data.time}
+                    desc={writing.data.description}
+                />
+                {index !== writings.length - 1 && <Divider />}
+            </>
+        ))
+    }
+    <Paginator
+        currentPage={currentPage}
+        totalPages={totalPages}
+        baseUrl="/writings/pages"
+    />
+</BaseLayout>

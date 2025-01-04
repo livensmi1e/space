@@ -1,0 +1,51 @@
+<footer class="footer">
+    <p class="footer__text">livensmi1e &copy; 2025</p>
+    <div class="footer__social">
+        <span>
+            <a href="https://github.com/livensmi1e"
+                ><i class="fa-brands fa-github-alt"></i></a
+            >
+        </span>
+        <span>
+            <a href="https://placetohidee.blogspot.com/">
+                <i class="fa-brands fa-blogger"></i>
+            </a>
+        </span>
+        <span>
+            <a href="http://instagram.com/livesmi1e"
+                ><i class="fa-brands fa-instagram"></i></a
+            >
+        </span>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-lg) 0;
+    }
+
+    .footer__text {
+        font-size: 1.1rem;
+    }
+
+    .footer__social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-md);
+        font-size: var(--font-xl);
+    }
+
+    .footer__social a i:hover {
+        color: var(--color-accent);
+    }
+</style>
+
+<script>
+    document.querySelectorAll(".footer__social a").forEach((anchor) => {
+        anchor.setAttribute("target", "_blank");
+    });
+</script>

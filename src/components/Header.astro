@@ -1,0 +1,146 @@
+<header class="header">
+    <div class="header__top">
+        <a class="logo" href="/">livensmi1e</a>
+        <button class="hamburger" type="button">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <ul class="navbar">
+        <li><a class="navbar__link" href="/writings">Writings</a></li>
+        <li><a class="navbar__link" href="/photos">Photos</a></li>
+        <li class="navbar__icon theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+        </li>
+    </ul>
+</header>
+
+<style>
+    .header {
+        display: flex;
+        flex-direction: column;
+        padding: var(--spacing-md) 0;
+        gap: var(--spacing-sm);
+    }
+
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar {
+        display: none;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .logo {
+        font-size: var(--font-xl);
+        font-weight: 600;
+    }
+
+    .navbar__link {
+        font-weight: 500;
+        font-size: var(--font-lg);
+    }
+
+    .navbar__link:hover {
+        color: var(--color-accent);
+    }
+
+    .navbar__icon {
+        font-size: var(--font-lg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar__icon:hover {
+        color: var(--color-accent);
+    }
+
+    .navbar__link,
+    .navbar__icon {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .theme-toggle i {
+        display: none;
+    }
+
+    [data-theme="dark"] .navbar__icon .fa-sun {
+        display: inline;
+    }
+
+    [data-theme="light"] .navbar__icon .fa-moon {
+        display: inline;
+    }
+
+    .hamburger {
+        font-size: var(--spacing-lg);
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        color: var(--color-text);
+    }
+
+    .hamburger .fa-xmark {
+        display: none;
+    }
+
+    .hamburger.active .fa-bars {
+        display: none;
+    }
+
+    .hamburger.active .fa-xmark {
+        display: inline;
+    }
+
+    @media (min-width: 768px) {
+        .header {
+            padding: var(--spacing-lg) 0;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .logo {
+            font-size: var(--font-xl);
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            gap: var(--spacing-xl);
+        }
+
+        .navbar__link,
+        .navbar__icon {
+            padding: 0;
+        }
+
+        .navbar__link {
+            font-size: var(--font-lg);
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    import "../scripts/theme-toggle.js";
+    import "../scripts/menu-toggle.js";
+</script>
