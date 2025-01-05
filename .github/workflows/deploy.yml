@@ -27,7 +27,6 @@ jobs:
                   HOST: ${{ secrets.HOST }}
               run: |
                   ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
-                    git remote set-url origin git@github.com:${{ github.repository_owner }}/readme.git
                     cd ./readme
                     git pull origin main
                     docker build -t readme .
