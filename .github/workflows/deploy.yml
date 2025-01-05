@@ -1,0 +1,33 @@
+name: Deploy via SSH
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Setup SSH
+          uses: webfactory/ssh-agent@v0.9.0
+          with:
+              ssh-private-key: ${{ secrets.SSH_KEY }}
+
+        - name: Deploy to VPS
+          env:
+              USER: ${{ secrets.USER }}
+              HOST: ${{ secrets.HOST }}
+          run: |
+              ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
+                cd /readme
+                git pull origin main
+                docker build -t readme .
+                docker stop readme || true
+                docker rm readme || true
+                docker run --name readme -d -p 80:80 readme
+              EOF
