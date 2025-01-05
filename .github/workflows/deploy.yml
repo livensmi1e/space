@@ -24,7 +24,7 @@ jobs:
                   HOST: ${{ secrets.HOST }}
               run: |
                   ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
-                    cd /readme
+                    cd ./readme
                     git pull origin main
                     docker build -t readme .
                     docker stop readme || true
