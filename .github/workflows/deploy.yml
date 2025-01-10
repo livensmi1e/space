@@ -29,8 +29,6 @@ jobs:
                   ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
                     cd ./readme
                     git pull origin main
-                    docker build -t readme .
-                    docker stop readme || true
-                    docker rm readme || true
-                    docker run --name readme -d -p 80:80 readme
+                    docker compose down
+                    docker compose up -d
                   EOF

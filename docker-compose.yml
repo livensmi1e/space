@@ -1,0 +1,11 @@
+services:
+  webserver:
+    build: 
+      context: .
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
+    volumes:
+      - /var/www/certbot/:/var/www/certbot/:ro
+      - /etc/letsencrypt/:/etc/letsencrypt/:ro
