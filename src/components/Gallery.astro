@@ -1,22 +1,48 @@
 ---
-import { Image } from "astro:assets";
-const { images }= Astro.props;
+import type { ImageMetadata } from "astro";
+import { Image, getImage } from "astro:assets";
+const { imageFolder }= Astro.props;
+
+const imagesImportFns = import.meta.glob<{default: ImageMetadata}>("/src/assets/gallery/**/*.{jpeg,jpg,png,gif}");
+const imagePaths = Object.keys(imagesImportFns).filter((imagePath) => {
+    return imagePath.startsWith(`/src/assets/gallery/${imageFolder}`)
+});
 ---
 
 <section class="gallery" id="gallery">
     {
-        images.map((image: any) => (
-            <a 
-                href={image.src},
-                data-pswp-width="1080"
-                data-pswp-height="720"
-                data-cropped="true"
-                target="_blank"
-                class="gallery__item"><Image src={image.importFn()} alt={image.alt}></Image>
-            </a>
-        ))
+        imagePaths.map(async (imagePath: any) => {
+            let image = imagesImportFns[imagePath]();
+            let optimizedImage =  await getImage({
+				src: image,
+			});
+            return (
+                <a 
+                    href={optimizedImage.src},
+                    data-pswp-width="1080"
+                    data-pswp-height="720"
+                    data-cropped="true"
+                    target="_blank"
+                    class="gallery__item"><Image src={image} alt=""></Image>
+                </a>
+            )
+        })
     }
 </section>
+
+<script>
+    import PhotoSwipeLightbox from "photoswipe/lightbox";
+    import "photoswipe/style.css";
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: "#gallery",
+        children: "a",
+        pswpModule: () => import("photoswipe"),
+        bgOpacity: 0.8,
+    });
+
+    lightbox.init();
+</script>
 
 <style>
     .gallery {

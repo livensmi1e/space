@@ -1,41 +1,15 @@
 ---
 import BaseLayout from "../../layouts/Base.astro";
 import Gallery from "../../components/Gallery.astro";
-
-const images = import.meta.glob("/src/assets/gallery/heaven/*.{jpeg,jpg,png,gif}");
-
-const galleryImages = Object.entries(images).map(
-    ([path, image]: [any, any]) => {
-        return {
-            src: path,
-            alt: "",
-            importFn: image
-        };
-    }
-);
 ---
 
 <BaseLayout>
     <div class="content">
         <h2 class="title">Photos</h2>
         <h3 class="desc">~ Heaven on Earth ~</h3>
-        <Gallery images={galleryImages} />
+        <Gallery imageFolder="heaven" />
     </div>
 </BaseLayout>
-
-<script>
-    import PhotoSwipeLightbox from "photoswipe/lightbox";
-    import "photoswipe/style.css";
-
-    const lightbox = new PhotoSwipeLightbox({
-        gallery: "#gallery",
-        children: "a",
-        pswpModule: () => import("photoswipe"),
-        bgOpacity: 0.8,
-    });
-
-    lightbox.init();
-</script>
 
 <style>
     .content {
