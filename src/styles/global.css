@@ -1,7 +1,7 @@
 :root {
     --font-family: "Inter", serif;
     
-    --color-background: rgb(251, 254, 251);
+    --color-background: rgb(255,255,248);
     --color-text: rgb(40, 39, 40);
     --color-text-light:  rgb(236, 233, 233);
     --color-accent: rgb(0, 108, 172);

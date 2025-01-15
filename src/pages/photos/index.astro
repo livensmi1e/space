@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+---
+
+<BaseLayout>
+    <div class="content">
+        <h2 class="title">Photos</h2>
+        <p class="desc">
+            This is all the pictures that capture charming, beaufiful, nostalgic
+            thing passing my life.
+        </p>
+        <p>
+            I don't know how to use a camera, or how to take a photo, just
+            randomly captures it using my Samsung A50 native camera.
+        </p>
+        <ul class="nav">
+            <li class="nav__link">
+                <a href="/photos/heaven">Heaven on Earth</a>
+            </li>
+            <li class="nav__link">
+                <a href="/photos/memories">Walk down memory lane</a>
+            </li>
+        </ul>
+    </div>
+</BaseLayout>
+
+<style>
+    .content {
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+    .title {
+        margin-bottom: var(--spacing-lg);
+    }
+    .desc {
+        margin-bottom: var(--spacing-xxs);
+    }
+    .nav {
+        list-style-position: inside;
+        padding-left: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
+
+    .nav__link {
+        margin: var(--spacing-xs) 0;
+        color: var(--color-accent);
+        font-style: italic;
+    }
+</style>
