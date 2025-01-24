@@ -29,6 +29,4 @@ jobs:
                   ssh -o StrictHostKeyChecking=no $USER@$HOST << 'EOF'
                     cd ./readme
                     git pull origin main
-                    docker compose down
-                    docker compose up -d --build
                   EOF

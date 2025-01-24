@@ -43,6 +43,14 @@ export const GISCUS: GiscusProps = {
 };
 ```
 
+> [info]
 > Tip! You can get ISO 8601 datetime by running `new Date().toISOString()` in the console. Make sure you remove quotes though.
 
 `new Date().toISOString()`
+
+> [important]
+> Highlights information that users should take into account, even when skimming.  
+
+
+> [warning]
+> Highlights information that users should take into account, even when skimming.  

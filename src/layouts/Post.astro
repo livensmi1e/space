@@ -1,6 +1,21 @@
 ---
 import BaseLayout from "./Base.astro";
 
+const notes = {
+    "info": {
+        "text": "Info",
+        "icon": `<i class="fa-solid fa-circle-info"></i>`
+    },
+    "warning": {
+        "text": "Warning",
+        "icon": `<i class="fa-solid fa-triangle-exclamation"></i>`
+    },
+    "important": {
+        "text": "Important",
+        "icon": `<i class="fa-regular fa-lightbulb"></i>`
+    }
+}
+
 const { meta } = Astro.props;
 ---
 
@@ -69,6 +84,10 @@ const { meta } = Astro.props;
         font-size: var(--font-lg);
     }
 
+    .markdown p {
+        margin: var(--spacing-md) 0;
+    }
+
     .markdown h2 {
         font-size: var(--font-xl);
         margin-top: var(--spacing-xl);
@@ -104,8 +123,35 @@ const { meta } = Astro.props;
         margin-top: var(--spacing-lg);
     }
 
-    .markdown p {
-        margin: var(--spacing-md) 0;
+    .markdown blockquote.warning {
+        border-inline-start: 3px solid #fb923c;
+        background-color: #fb923c0d;
+    }
+
+    .markdown blockquote.important {
+        border-inline-start: 3px solid #84cc16;
+        background-color: #84cc160d;
+    }
+
+    .markdown blockquote p {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        margin: 0;
+    }
+
+    .markdown blockquote .quote__icon {
+        color: #60a5fa;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+    }
+
+    .markdown blockquote.warning .quote__icon {
+        color: #fb923c;
+    }
+
+    .markdown blockquote.important .quote__icon {
+        color: #84cc16;
     }
 
     .markdown p:has(img) {
@@ -124,3 +170,23 @@ const { meta } = Astro.props;
         }
     }
 </style>
+
+<script define:vars={{notes}}>
+    const blockquotes = document.querySelectorAll("blockquote p");
+    blockquotes.forEach(blockquote => {
+        const content = blockquote.textContent?.trim();
+        const match = content?.match(/^\[(info|warning|important)\]\s*(.*)/);
+        if (match){
+            const type = match[1];
+            const content = match[2];
+            const note= notes[type];
+            const iconSpan = document.createElement("span");
+            blockquote?.parentElement?.classList?.add(type);
+            iconSpan.classList.add("quote__icon");
+            iconSpan.innerHTML = note.icon + " " + note.text;
+            blockquote.textContent = content;
+            blockquote.prepend(iconSpan);
+            
+        }
+    });
+</script>
