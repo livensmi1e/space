@@ -101,6 +101,17 @@ const { meta } = Astro.props;
         border-inline-start: 3px solid #60a5fa;
         padding: var(--spacing-md);
         margin-bottom: var(--spacing-lg);
+        margin-top: var(--spacing-lg);
+    }
+
+    .markdown p {
+        margin: var(--spacing-md) 0;
+    }
+
+    .markdown p:has(img) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--spacing-lg);
     }
 
     @media (max-width: 768px) {
