@@ -5,7 +5,7 @@ const prevPage =
     currentPage > 2
         ? `${baseUrl}/${currentPage - 1}`
         : currentPage == 2
-          ? "/"
+          ? "/readme"
           : null;
 const nextPage =
     currentPage < totalPages ? `${baseUrl}/${currentPage + 1}` : null;
