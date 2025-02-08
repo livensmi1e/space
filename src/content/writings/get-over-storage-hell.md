@@ -179,6 +179,6 @@ ssh -T git@github.com
 
 ## Result
 
-![Result of setup environment](readme/src/assets/writings/result.png)
+![Result of setup environment](../../assets/writings/result.png)
 
 So many questions but I have learned a lot. Ah, and one more thing, the touchpad works well. Because of this event, I know the it 's not physically damaged, the root is error in driver I2C HID Driver.
