@@ -50,8 +50,7 @@ If we don't return `"$ "` and just write to host, then by default, powershell wi
 
 Here is the result.
 
-<!-- ![dfss](../../assets/writings/result-1.png) -->
-<p><img src="/readme/src/assets/writings/result-1.png" width="700"></p>
+![Mimic bash appearance](../../assets/writings/result-1.png)
 
 ## Refs
 

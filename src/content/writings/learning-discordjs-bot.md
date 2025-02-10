@@ -41,6 +41,6 @@ I learned how to read docs, how to use Redis, Discordjs, Judge0, and learn how t
 
 ## Result
 
-<p><img src="/readme/src/assets/writings/code-exec.png" width="700"></p>
+![Run command](../../assets/writings/code-exec.png)
 
-<p><img src="/readme/src/assets/writings/code-stat.png" width="500"></p>
+![Stat commad](../../assets/writings/code-stat.png)
