@@ -160,6 +160,12 @@ const { meta } = Astro.props;
         margin-bottom: var(--spacing-lg);
     }
 
+    .markdown p img {
+        max-width: 850px;
+        height: auto;
+        border-radius: 0.375em;
+    }
+
     @media (max-width: 768px) {
         .markdown__meta {
             gap: var(--spacing-xxs);
