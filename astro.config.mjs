@@ -5,8 +5,7 @@ import remarkCollapse from "remark-collapse";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://livensmi1e.github.io",
-    base: "/readme",
+    site: "https://livensmi1e.fun",
     markdown: {
         remarkPlugins: [
             remarkToc,

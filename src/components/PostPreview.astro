@@ -4,7 +4,7 @@ const { title, date, desc, slug, time } = Astro.props;
 
 <article class="preview">
     <h3 class="preview__title">
-        <a href={`/readme/writings/${slug}`}>
+        <a href={`/writings/${slug}`}>
             {title}
         </a>
     </h3>
@@ -21,7 +21,7 @@ const { title, date, desc, slug, time } = Astro.props;
         {desc}
     </p>
     <p class="rm__link">
-        <a href={`/readme/writings/${slug}`}>Read more</a>
+        <a href={`/writings/${slug}`}>Read more</a>
     </p>
 </article>
 
