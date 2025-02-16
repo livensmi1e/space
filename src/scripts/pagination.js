@@ -12,4 +12,4 @@ export function paginate(items, currentPage, itemsPerPage) {
     };
 }
 
-export const ITEMS_PER_PAGE = 2;
+export const ITEMS_PER_PAGE = 4;
