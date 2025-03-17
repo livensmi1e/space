@@ -3,7 +3,7 @@ title: "My first time got Ransom Attack"
 date: "2025-03-16"
 time: "10:36 PM"
 description: "My database data being deleted and hacker want me to pay money to get back data"
-tags: ["scripting"]
+tags: ["experience", "security"]
 ---
 
 ## Table of Contents
