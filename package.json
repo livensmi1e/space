@@ -9,8 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.1.1",
-    "astro": "^5.1.1",
+    "@fontsource/inter": "^5.2.5",
+    "astro": "^5.5.4",
     "photoswipe": "^5.4.4",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0"
