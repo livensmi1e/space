@@ -1,7 +1,7 @@
 ---
 title: "Learn to write simple JSON lexer and parer"
 date: "2025-03-23"
-time: "09:30"
+time: "09:30 AM"
 description: "My note of learning how to implement incomplete json lexer, parser. Everything I write here is just for myself."
 tags: ["language"]
 ---
