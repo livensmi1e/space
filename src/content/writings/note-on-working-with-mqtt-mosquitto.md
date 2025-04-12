@@ -8,7 +8,9 @@ tags: ["mqtt"]
 
 ## Table of Contents
 
-## Setup
+## Docker
+
+### Set up
 
 Mosquitto MQTT broker will be hosted on docker container.
 
@@ -60,7 +62,7 @@ This will prompt for password.
 
 The `-c` option is for create new file and override any file on that location.
 
-## Test
+### Test
 
 On the client machine, test connection:
 
@@ -69,3 +71,44 @@ mosquitto_pub -h <broker-address> -u <username> -P <password> -t <topic> -m "Hi"
 ```
 
 And voila!
+
+## Windows
+
+### Setup
+
+1. Download on offical website, the download includes mosquitto broker daemon, mosquitto pub/sub client binary, mosquitto password utility to manage credentials.
+
+2. Open `mosquitto.conf`, add following configs
+
+```bash
+allow_anonymous false
+listener 1883 localhost
+password_file C:\mosquitto\pwfile
+```
+
+3. On Powershell/CMD, run
+
+```bash
+mosquitto_passwd -c C:\mosquitto\pwfile <username>
+```
+
+This will prompt for password, then, the file `C:\mosquitto\pwfile` will be created if not exist. It will have this format: `username:password_hash`.
+
+4. Restart daemon
+
+-   On CMD (Admin):
+
+```bash
+net stop mosquitto
+net start mosquitto
+```
+
+-   On Powwershell:
+
+```bash
+stop-service mosquitto
+start-service mosquitto
+get-service mosquitto
+```
+
+Then, we can use with localhost.
