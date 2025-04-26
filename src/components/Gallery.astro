@@ -6,6 +6,12 @@ const { imageFolder }= Astro.props;
 const imagesImportFns = import.meta.glob<{default: ImageMetadata}>("/src/assets/gallery/**/*.{jpeg,jpg,png,gif}");
 const imagePaths = Object.keys(imagesImportFns).filter((imagePath) => {
     return imagePath.startsWith(`/src/assets/gallery/${imageFolder}`)
+}).sort((a, b) => {
+    const getNumber = (path: string) => {
+      const match = path.match(/(\d+)/);
+      return match ? parseInt(match[1], 10) : 0;
+    };
+    return getNumber(a) - getNumber(b);
 });
 ---
 
@@ -18,7 +24,7 @@ const imagePaths = Object.keys(imagesImportFns).filter((imagePath) => {
 			});
             return (
                 <a 
-                    href={optimizedImage.src},
+                    href={optimizedImage.src}
                     data-pswp-width="1080"
                     data-pswp-height="720"
                     data-cropped="true"
@@ -49,8 +55,10 @@ const imagePaths = Object.keys(imagesImportFns).filter((imagePath) => {
         display: grid;
         grid-template-columns: repeat(auto-fill, 170px);
         gap: var(--spacing-sm);
+        margin: auto;
         margin-bottom: var(--spacing-xl);
         padding: var(--spacing-sm);
+        justify-content: center;
     }
 
     .gallery__item {
@@ -78,6 +86,14 @@ const imagePaths = Object.keys(imagesImportFns).filter((imagePath) => {
 
     .gallery__item img:hover {
         filter: brightness(100%);
+    }
+
+    @media (max-width: 768px) {
+        .gallery__item {
+            /* height: 100%;
+            width: 100%; */
+            /* margin: auto; */
+        }
     }
 
 </style>
