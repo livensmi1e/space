@@ -1,24 +1,24 @@
 :root {
     --font-family: "Inter", serif;
-    
-    --color-background: rgb(255,255,248);
-    --color-text: rgb(40, 39, 40);
-    --color-text-light:  rgb(236, 233, 233);
-    --color-accent: rgb(0, 108, 172);
-    --color-line: rgb(236, 233, 233);
-    --color-code: rgb(235, 236, 235);
+
+    --color-background: #fff;
+    --color-text: #1c1e21;
+    --color-text-light: #6b7280;
+    --color-accent: #0189f4;
+    --color-line: #e5e7eb;
+    --color-code: #f3f4f6;
 
     --width-desktop: 52rem;
     --width-tablet: 46rem;
     --width-mobile: 100%;
-    
-    --spacing-xxs: 0.25rem;   /* 4px */
-    --spacing-xs: 0.5rem;     /* 8px */
-    --spacing-sm: 0.75rem;    /* 12px */
-    --spacing-md: 1rem;       /* 16px */
-    --spacing-lg: 1.5rem;     /* 24px */
-    --spacing-xl: 2rem;       /* 32px */
-    --spacing-xxl: 3rem;      /* 48px */
+
+    --spacing-xxs: 0.25rem; /* 4px */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-sm: 0.75rem; /* 12px */
+    --spacing-md: 1rem; /* 16px */
+    --spacing-lg: 1.5rem; /* 24px */
+    --spacing-xl: 2rem; /* 32px */
+    --spacing-xxl: 3rem; /* 48px */
 
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
@@ -27,24 +27,28 @@
     --font-xl: 1.5rem;
     --font-2xl: 2rem;
     --font-3xl: 3rem;
-}   
-
-html[data-theme="dark"] {
-    --color-background: rgb(47, 55, 65);
-    --color-text: rgb(230, 230, 230);
-    --color-text-light: rgb(174, 177, 180);
-    --color-accent: rgb(26, 217, 217);
-    --color-line: rgb(59, 70, 85);
-    --color-code: rgb(59, 70, 83);
 }
 
-*, *::before, *::after {
+html[data-theme="dark"] {
+    --color-background: #09090b; /* Slate-900 */
+    --color-text: #f8fafc; /* Slate-50 */
+    --color-text-light: #94a3b8; /* Slate-400 */
+    --color-accent: #3b82f6; /* Blue-500 */
+    --color-accent-hover: #60a5fa; /* Blue-400 */
+    --color-line: #1e293b; /* Slate-800 */
+    --color-code: #1e293b; /* Slate-800 */
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: var(--font-family);
     font-size: var(--font-md);
@@ -56,7 +60,8 @@ a {
     color: var(--color-text);
 }
 
-.astro-code, .astro-code span {
+.astro-code,
+.astro-code span {
     font-family: "IBM Plex Mono", monospace;
 }
 
