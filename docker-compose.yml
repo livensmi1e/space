@@ -1,6 +1,6 @@
 services:
   webserver:
-    build: 
+    build:
       context: .
     ports:
       - "80:80"

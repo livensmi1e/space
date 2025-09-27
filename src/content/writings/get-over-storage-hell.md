@@ -26,46 +26,46 @@ Here is exacly my memor:
 
 > Việc cần làm sau khi reset window
 >
-> -   Chuyển Download sang ổ D
-> -   Tăng font size
-> -   Tải apps
-> -   Setup môi trường dev
-> -   Fix vụ touchpad
-> -   Login web apps - bookmark bar
-> -   Thiết kế phương án lưu file
-> -   Setup vscode
-> -   Liên kết git và github
-> -   ssh config
+> - Chuyển Download sang ổ D
+> - Tăng font size
+> - Tải apps
+> - Setup môi trường dev
+> - Fix vụ touchpad
+> - Login web apps - bookmark bar
+> - Thiết kế phương án lưu file
+> - Setup vscode
+> - Liên kết git và github
+> - ssh config
 
 > App
 >
-> -   Docker Deskop
-> -   Vscode
-> -   Cisco pt
-> -   Figma
-> -   Obsidian
-> -   Wireguard
-> -   Zalo
+> - Docker Deskop
+> - Vscode
+> - Cisco pt
+> - Figma
+> - Obsidian
+> - Wireguard
+> - Zalo
 
 > Environment
 >
-> -   MSSY2
-> -   Node
-> -   Go
-> -   PHP
-> -   Antlr
-> -   Java
-> -   Python
-> -   Git
-> -   WSL
+> - MSSY2
+> - Node
+> - Go
+> - PHP
+> - Antlr
+> - Java
+> - Python
+> - Git
+> - WSL
 
 I have learned how to extend the C drive. First, go the `Disk Management`, delete the D drive that stays next to C drive. Then extend the C drive. I chose to give it 50 gigs more. Then make new drive and name it D. So now, my C drive capacity is 147 gigs and D is 90 gigs. Awesome!
 
 The next step is installing applications. I carefully inspect the StackOverFlow forum, documentations to make sure that I can change the installation folder into D drive. My D drive now will be divided as:
 
--   dev: as it name
--   env: storing the binary execution files.
--   apps: storing the installation of applications.
+- dev: as it name
+- env: storing the binary execution files.
+- apps: storing the installation of applications.
 
 Now let's move to experiement installing these. I only list some that suck me and I have learned new things, the rest is kind of easy to do.
 
@@ -165,9 +165,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
 Install Git is easy but one thing is a black box for me is connect it to Github Account. Now I know that there is 3 way to connect git to github
 
--   Password based (Stopped since 2021)
--   SSH
--   Access token
+- Password based (Stopped since 2021)
+- SSH
+- Access token
 
 I chose SSH. because I have backup the `.ssh` folder so the key pair is still there. I just need to put it into `%USERPROFILE%` and everything works fine (also put the public key on Github). From now on, every private repo I has to clone via SSH.
 

@@ -18,10 +18,10 @@ For Discord bot, I use Discord.js which is a wrapper for Discord API, to help ma
 
 As a beginner, I also found some wonderful repositories to read, understand, learn from them. These are:
 
--   [anhhung04/teacher_assistant_discord_bot](https://github.com/anhhung04/teacher_assistant_discord_bot)
--   [anhhung04/werewolf-bot](https://github.com/anhhung04/werewolf-bot)
--   [judge0/discord-bot](https://github.com/judge0/discord-bot)
--   [engineer-man/piston-bot](https://github.com/engineer-man/piston-bot)
+- [anhhung04/teacher_assistant_discord_bot](https://github.com/anhhung04/teacher_assistant_discord_bot)
+- [anhhung04/werewolf-bot](https://github.com/anhhung04/werewolf-bot)
+- [judge0/discord-bot](https://github.com/judge0/discord-bot)
+- [engineer-man/piston-bot](https://github.com/engineer-man/piston-bot)
 
 ## Idea
 

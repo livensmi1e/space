@@ -96,14 +96,14 @@ This will prompt for password, then, the file `C:\mosquitto\pwfile` will be crea
 
 4. Restart daemon
 
--   On CMD (Admin):
+- On CMD (Admin):
 
 ```bash
 net stop mosquitto
 net start mosquitto
 ```
 
--   On Powwershell:
+- On Powwershell:
 
 ```bash
 stop-service mosquitto

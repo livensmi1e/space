@@ -54,6 +54,6 @@ Here is the result.
 
 ## Refs
 
--   [Powershell Prompt Docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.5)
--   [Change your Powershell prompt to look like bash](https://yetanotherchris.dev/2017-02-23-change-your-powershell-prompt-to-look-like-bash/)
--   [Github Repository](https://github.com/livensmi1e/scripts/tree/main/powershell)
+- [Powershell Prompt Docs](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_prompts?view=powershell-7.5)
+- [Change your Powershell prompt to look like bash](https://yetanotherchris.dev/2017-02-23-change-your-powershell-prompt-to-look-like-bash/)
+- [Github Repository](https://github.com/livensmi1e/scripts/tree/main/powershell)

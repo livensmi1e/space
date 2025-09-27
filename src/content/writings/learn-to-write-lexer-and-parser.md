@@ -77,9 +77,9 @@ func (l *Lexer) emit(t TokenType) {
 }
 ```
 
--   `Run` is the entry point, which was called by parser to get things tokenized.
--   `NextToken` takes the next token from the channel.
--   `emit` will put the token the lexer has done lexing into channel.
+- `Run` is the entry point, which was called by parser to get things tokenized.
+- `NextToken` takes the next token from the channel.
+- `emit` will put the token the lexer has done lexing into channel.
 
 Note that the lexer will only has 2 exported function, for which the parse will call it. The rest of its methods are unexported.
 
@@ -284,8 +284,8 @@ I know this is incomplete, and is nothing compare to the programming world. But 
 
 ## Reference
 
--   [Writing a Lexer and Parser in Go](https://adampresley.github.io/2015/05/12/writing-a-lexer-and-parser-in-go-part-2.html)
--   [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
--   [go.dev/src/text/template/parse/lex.go](https://go.dev/src/text/template/parse/lex.go)
--   [Building a JSON Parser and Query Tool with Go](https://medium.com/@bradford_hamilton/building-a-json-parser-and-query-tool-with-go-8790beee239a)
--   [Function Types in Go (golang)](https://jordanorelli.com/post/42369331748/function-types-in-go-golang)
+- [Writing a Lexer and Parser in Go](https://adampresley.github.io/2015/05/12/writing-a-lexer-and-parser-in-go-part-2.html)
+- [Lexical Scanning in Go - Rob Pike](https://www.youtube.com/watch?v=HxaD_trXwRE)
+- [go.dev/src/text/template/parse/lex.go](https://go.dev/src/text/template/parse/lex.go)
+- [Building a JSON Parser and Query Tool with Go](https://medium.com/@bradford_hamilton/building-a-json-parser-and-query-tool-with-go-8790beee239a)
+- [Function Types in Go (golang)](https://jordanorelli.com/post/42369331748/function-types-in-go-golang)

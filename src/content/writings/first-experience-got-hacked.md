@@ -36,5 +36,5 @@ First, I changed the default username and password of postgres db container. The
 
 Experts would say I am stupid. Yes, but who cares. I have learned a lot from this experience. I want to write on here to remind myself.
 
--   Use secure password, always
--   Check port carefully when binding port in docker compose, as it will override the rule in ufw.
+- Use secure password, always
+- Check port carefully when binding port in docker compose, as it will override the rule in ufw.

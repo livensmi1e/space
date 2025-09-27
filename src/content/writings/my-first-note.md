@@ -49,8 +49,7 @@ export const GISCUS: GiscusProps = {
 `new Date().toISOString()`
 
 > [important]
-> Highlights information that users should take into account, even when skimming.  
-
+> Highlights information that users should take into account, even when skimming.
 
 > [warning]
-> Highlights information that users should take into account, even when skimming.  
+> Highlights information that users should take into account, even when skimming.

@@ -12,10 +12,10 @@ tags: ["fsm"]
 
 I want to build fsm that can be:
 
--   General - can be used in any usecase
--   Support state, transition rule, trigger event and most importantly callback function
--   Expose clean public API
--   Later on, as I read blogs, I want it can be visualized on tools like drawio, mermaid,...
+- General - can be used in any usecase
+- Support state, transition rule, trigger event and most importantly callback function
+- Expose clean public API
+- Later on, as I read blogs, I want it can be visualized on tools like drawio, mermaid,...
 
 ## What I learned
 
@@ -169,8 +169,8 @@ Voila, the machine works
 
 ## Reference
 
--   [Finite State Machines in Go -- Main reference](https://sebinbabu.com/posts/finite-state-machines-in-go/)
--   [GFSM - A Simple and Fast FSM for Go](https://sysdev.me/gfsm-a-simple-and-fast-fsm-for-go/)
--   [Errors are values](https://go.dev/blog/errors-are-values)
--   [Golang Error Handling lesson by Rob Pike](https://jxck.hatenablog.com/entry/golang-error-handling-lesson-by-rob-pike)
--   [Mermaid state diagram docs](https://mermaid.js.org/syntax/stateDiagram.html)
+- [Finite State Machines in Go -- Main reference](https://sebinbabu.com/posts/finite-state-machines-in-go/)
+- [GFSM - A Simple and Fast FSM for Go](https://sysdev.me/gfsm-a-simple-and-fast-fsm-for-go/)
+- [Errors are values](https://go.dev/blog/errors-are-values)
+- [Golang Error Handling lesson by Rob Pike](https://jxck.hatenablog.com/entry/golang-error-handling-lesson-by-rob-pike)
+- [Mermaid state diagram docs](https://mermaid.js.org/syntax/stateDiagram.html)
