@@ -4,6 +4,7 @@ date: "2025-09-27"
 time: "20:13 PM"
 description: "This is place where I share my own experience learning AWS. Note that I am not favor of this infra or another like GCP, Azure. I just note for myself (and probably you) on using AWS, things I have learned. Remember that AWS is not something you want to master, it just a tool for us to build things. So don't expect to read this to become AWS architec, all you need to master is the concepts, ideas that you can apply broadly to cloud infrastructure in general."
 tags: ["cloud-infrastructure"]
+isDraft: true
 ---
 
 ## Table of Contents

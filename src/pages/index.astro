@@ -27,7 +27,7 @@ const { paginatedItems, totalPages } = paginate(
             <>
                 <PostPreview
                     slug={writing.id}
-                    title={writing.data.title}
+                    title={(writing.data.isDraft ? "[Draft] " : "") + writing.data.title}
                     date={writing.data.date}
                     time={writing.data.time}
                     desc={writing.data.description}

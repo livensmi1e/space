@@ -16,6 +16,7 @@ const writing = defineCollection({
     time: z.string(),
     description: z.string(),
     tags: z.array(z.string()),
+    isDraft: z.boolean().optional(),
   }),
 });
 
