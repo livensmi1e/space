@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import OthersContent from "../../content/others.md"
+import Markdown from "../../components/Markdown.astro";
+---
+
+<BaseLayout>
+    <div class="content">
+        <h2 class="title">Others</h2>
+        <p class="desc">
+            Here are other stuff, resources that I found grateful, interesting to share with you. They are videos, talks or blog articles that changed my mindset about something.
+        </p>
+        <p>
+            You may find them helpful as well. Be humble and curious :)
+        </p>
+        <div class="markdown">
+            <Markdown>
+                <OthersContent/>
+            </Markdown>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .content {
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+    .title {
+        margin-bottom: var(--spacing-lg);
+    }
+    .desc {
+        margin-bottom: var(--spacing-xxs);
+    }
+</style>
