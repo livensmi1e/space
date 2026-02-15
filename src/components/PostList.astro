@@ -10,7 +10,7 @@ const { writings, tag } = Astro.props;
                 <div class="writings__item">
                     <span class="item__date">{writing.date}</span>
                     <span>
-                        <a href={`writings/${writing.id}`}>{writing.title}</a>
+                        <a href={`${writing.id}`}>{writing.title}</a>
                     </span>
                 </div>
             ))
