@@ -6,7 +6,7 @@ import remarkCollapse from "remark-collapse";
 // https://astro.build/config
 export default defineConfig({
   site: "https://livensmi1e.github.io",
-  base: "/space/",
+  base: "/space",
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of Contents" }]],
     shikiConfig: {
