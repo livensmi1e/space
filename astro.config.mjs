@@ -11,8 +11,8 @@ export default defineConfig({
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of Contents" }]],
     shikiConfig: {
       themes: {
-        light: "catppuccin-latte",
-        dark: "catppuccin-frappe",
+        light: "github-light-default",
+        dark: "github-dark-default",
       },
     },
   },

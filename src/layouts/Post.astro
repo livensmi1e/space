@@ -24,10 +24,7 @@ const { meta } = Astro.props;
     <div class="markdown">
         <h1 class="markdown__title">{meta.data.title}</h1>
         <div class="markdown__meta">
-            <span class="meta__icon">
-                <i class="fa-solid fa-calendar-days"></i>
-            </span>
-            <span>Written: </span>
+            <span>Written at: </span>
             <span>{meta.data.date}</span>
             <span>|</span>
             <span>{meta.data.time}</span>
@@ -45,7 +42,12 @@ const { meta } = Astro.props;
     .markdown__title {
         margin-top: var(--spacing-lg);
         margin-bottom: var(--spacing-xs);
-        font-size: var(--font-xl);
+        font-size: var(--font-2xl);
+        color: var(--color-accent);
+    }
+
+    .markdown__title:hover {
+        color: var(--color-text);
     }
 
     .markdown__meta {
@@ -58,10 +60,6 @@ const { meta } = Astro.props;
 
     .markdown__desc {
         margin-bottom: var(--spacing-lg);
-    }
-
-    .meta__icon {
-        font-size: var(--font-lg);
     }
 </style>
 

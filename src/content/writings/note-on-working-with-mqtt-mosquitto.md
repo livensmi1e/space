@@ -16,7 +16,7 @@ Mosquitto MQTT broker will be hosted on docker container.
 
 First prepare compose file:
 
-```docker
+```yml
 services:
     mosquitto-broker:
         image: eclipse-mosquitto:2.0.21

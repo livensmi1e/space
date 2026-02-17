@@ -9,7 +9,7 @@ isDraft: true
 
 ## Table of Contents
 
-### CLI
+## CLI
 
 I have completely no idea about this. All I do is blindly copying and following the tutorials/docs. I don't understand what is
 
@@ -26,7 +26,7 @@ Before we can use AWS CLI tool, we have to authenticate against AWS. There are s
 
 **Setup SSO:**
 
-```
+```bash
 aws configure sso
 ```
 
@@ -38,7 +38,7 @@ After filling all the informations, a file named `config` will be created inside
 
 Checking the file, we can see:
 
-```
+```bash
 [default]
 sso_session = your-sso-session
 sso_account_id = id
@@ -61,7 +61,7 @@ Useful resources:
 - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
 - https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#sso-configure-profile-token-auto-sso
 
-### IAM
+## IAM
 
 I understand like this:
 
@@ -70,13 +70,13 @@ I understand like this:
 - There is identity-based policy which defines that policy can do which action to what resource and resourced-based policy which defines who can do which action to it.
 - Policy uses implicit DENY to all action, we can explicitly ALLOW or DENY. Explicit DENY is useful for example when we allow all but one specific identity.
 
-### Lambda
+## Lambda
 
 Integration
 
 API Gateway
 
-### OpenSearch Service
+## OpenSearch Service
 
 Domain
 

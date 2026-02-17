@@ -1,12 +1,10 @@
 :root {
-  --font-family: "Inter", serif;
-
   --color-background: #fff;
-  --color-text: #1c1e21;
-  --color-text-light: #6b7280;
+  --color-text: #4a4a4a;
+  --color-title: #363636;
   --color-accent: #0189f4;
   --color-line: #e5e7eb;
-  --color-code: #f3f4f6;
+  --color-code: #f5f5f5;
 
   --width-desktop: 52rem;
   --width-tablet: 46rem;
@@ -32,11 +30,11 @@
 html[data-theme="dark"] {
   --color-background: #09090b; /* Slate-900 */
   --color-text: #f8fafc; /* Slate-50 */
-  --color-text-light: #94a3b8; /* Slate-400 */
+  --color-title: #f8fafc;
   --color-accent: #3b82f6; /* Blue-500 */
   --color-accent-hover: #60a5fa; /* Blue-400 */
   --color-line: #1e293b; /* Slate-800 */
-  --color-code: #1e293b; /* Slate-800 */
+  --color-code: #cecece; /* Slate-800 */
 }
 
 *,
@@ -50,7 +48,7 @@ html[data-theme="dark"] {
 html,
 body {
   height: 100%;
-  font-family: var(--font-family);
+  font-family: 'Consolas', 'Courier New', monospace, sans-serif;
   font-size: var(--font-md);
   font-weight: 400;
 }
@@ -60,9 +58,21 @@ a {
   color: var(--color-text);
 }
 
+p > a {
+  color: var(--color-accent);
+}
+
+p > a:hover {
+  color: var(--color-accent-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-title);
+}
+
 .astro-code,
 .astro-code span {
-  font-family: "IBM Plex Mono", monospace;
+  background-color: var(--color-code) !important;
 }
 
 html[data-theme="dark"] {
@@ -77,10 +87,9 @@ html[data-theme="dark"] {
 }
 
 code:not(pre code) {
-  border-radius: 0.25rem;
   background-color: var(--color-code);
   padding: 0.25rem;
-  font-weight: 600;
-  font-size: var(--font-xs);
-  font-style: italic;
+  font-weight: 500;
+  font-size: var(--font-sm);
+  color: #da1039;
 }

@@ -53,3 +53,9 @@ export const GISCUS: GiscusProps = {
 
 > [warning]
 > Highlights information that users should take into account, even when skimming.
+
+Default blockquote
+
+> Tip! You can get ISO 8601 datetime by running new Date().toISOString() in the console. Make sure you remove quotes though.
+
+[Test](https://youtube.com)

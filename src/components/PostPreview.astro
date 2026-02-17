@@ -4,15 +4,12 @@ const { title, date, desc, slug, time } = Astro.props;
 
 <article class="preview">
     <h3 class="preview__title">
-        <a href={`writings/${slug}`}>
+        <a href={`${import.meta.env.BASE_URL}/writings/${slug}`}>
             {title}
         </a>
     </h3>
 
     <div class="preview__meta">
-        <span>
-            <i class="fa-solid fa-calendar-days"></i>
-        </span>
         <span>{date}</span>
         <span>|</span>
         <span>{time}</span>
@@ -21,7 +18,7 @@ const { title, date, desc, slug, time } = Astro.props;
         {desc}
     </p>
     <p class="rm__link">
-        <a href={`writings/${slug}`}>Read more</a>
+        <a href={`${import.meta.env.BASE_URL}/writings/${slug}`}>Read more</a>
     </p>
 </article>
 
