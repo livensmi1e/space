@@ -4,6 +4,7 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,4 +24,5 @@ export default defineConfig({
       },
     },
   },
+  integrations: [react()],
 });
