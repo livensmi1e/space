@@ -1,4 +1,4 @@
-import Giscus from '@giscus/react'
+import Giscus from "@giscus/react";
 
 const Comments = () => {
   return (
@@ -14,7 +14,7 @@ const Comments = () => {
       loading="lazy"
       strict="0"
     />
-  )
-}
+  );
+};
 
-export default Comments
+export default Comments;

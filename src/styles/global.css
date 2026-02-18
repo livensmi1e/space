@@ -56,6 +56,8 @@ body {
 a {
   text-decoration: none;
   color: var(--color-text);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 p > a {
