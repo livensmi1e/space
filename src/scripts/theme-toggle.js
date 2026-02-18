@@ -1,3 +1,5 @@
+// Deprecated: This file is no longer used in the project.
+
 const themeToggle = document.querySelector(".theme-toggle");
 const moonIcon = document.querySelector(".fa-moon");
 const sunIcon = document.querySelector(".fa-sun");

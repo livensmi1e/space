@@ -48,7 +48,7 @@ html[data-theme="dark"] {
 html,
 body {
   height: 100%;
-  font-family: "Consolas", "Courier New", monospace, sans-serif;
+  font-family: "Raleway", "Consolas", "Courier New", monospace, sans-serif;
   font-size: var(--font-md);
   font-weight: 400;
 }

@@ -1,1 +1,1 @@
-Blog website I write in free time.
+Blog website I and ChatGPT write in free time :)

@@ -14,6 +14,23 @@
         </p>
         <p class="quote__author">&mdash; Truman</p>
     </div>
+    <div class="hero__music">
+        <button class="music__btn" id="playBtn" aria-label="Play">></button>
+        <input
+            type="range"
+            id="progress"
+            value="0"
+            step="0.1"
+            min="0"
+            class="music__progress"
+        />
+        <span class="music__time">
+            <span id="current">0</span>
+            <span class="music__divider">/</span>
+            <span id="duration">0</span>
+        </span>
+        <audio id="audio" src={`${import.meta.env.BASE_URL}/country-roads-john-denver.mp3`}></audio>
+    </div>
 </section>
 
 <style>
@@ -71,4 +88,53 @@
             font-size: var(--font-md);
         }
     }
+
+    .hero__music {
+        margin-top: var(--spacing-md);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        justify-content: center;
+        width: 100%;
+        max-width: var(--width-tablet);
+        margin-inline: auto;
+    }
+
+    .music__btn {
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        border: 1px solid var(--color-text);
+        cursor: pointer;
+    }
+
+    .music__progress {
+        flex: 1;
+        height: 5px;
+        appearance: none;
+        background: var(--color-code);
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    .music__progress::-webkit-slider-thumb {
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: var(--color-text);
+        border-radius: 50%;
+        border: none;
+    }
+
+    .music__progress::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        background: var(--color-text);
+        border-radius: 50%;
+        border: none;
+    }
 </style>
+
+<script>
+    import "../scripts/music-player.js";
+</script>

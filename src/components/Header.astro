@@ -2,19 +2,15 @@
     <div class="header__top">
         <a class="logo" href={import.meta.env.BASE_URL}>livensmi1e</a>
         <button class="hamburger" type="button">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
+            <span class="burger">/open-menu</span>
+            <span class="cancel">/cancel</span>
         </button>
     </div>
 
     <ul class="navbar">
-        <li><a class="navbar__link" href={`${import.meta.env.BASE_URL}/writings/`}>Writings</a></li>
-        <li><a class="navbar__link" href={`${import.meta.env.BASE_URL}/photos/`}>Photos</a></li>
-        <li><a class="navbar__link" href={`${import.meta.env.BASE_URL}/others/`}>Others</a></li>
-        <li class="navbar__icon theme-toggle">
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
-        </li>
+        <li><a class="navbar__link" href={`${import.meta.env.BASE_URL}/writings/`}>/writings</a></li>
+        <li><a class="navbar__link" href={`${import.meta.env.BASE_URL}/photos/`}>/photos</a></li>
+        <li><a class="navbar__link" href={`${import.meta.env.BASE_URL}/misc/`}>/misc</a></li>
     </ul>
 </header>
 
@@ -63,52 +59,28 @@
         color: var(--color-accent);
     }
 
-    .navbar__icon {
-        font-size: var(--font-lg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar__icon:hover {
-        color: var(--color-accent);
-    }
-
-    .navbar__link,
-    .navbar__icon {
+    .navbar__link {
         padding: 0 var(--spacing-sm);
     }
 
-    .theme-toggle i {
-        display: none;
-    }
-
-    [data-theme="dark"] .navbar__icon .fa-sun {
-        display: inline;
-    }
-
-    [data-theme="light"] .navbar__icon .fa-moon {
-        display: inline;
-    }
-
     .hamburger {
-        font-size: var(--spacing-lg);
+        font-size: var(--spacing-md);
         background: none;
         border: none;
         cursor: pointer;
         display: block;
-        color: var(--color-text);
+        font-family: "Railway";
     }
 
-    .hamburger .fa-xmark {
+    .hamburger .cancel {
         display: none;
     }
 
-    .hamburger.active .fa-bars {
+    .hamburger.active .burger {
         display: none;
     }
 
-    .hamburger.active .fa-xmark {
+    .hamburger.active .cancel {
         display: inline;
     }
 
@@ -130,8 +102,7 @@
             gap: var(--spacing-xl);
         }
 
-        .navbar__link,
-        .navbar__icon {
+        .navbar__link {
             padding: 0;
         }
 
@@ -146,6 +117,5 @@
 </style>
 
 <script>
-    import "../scripts/theme-toggle.js";
     import "../scripts/menu-toggle.js";
 </script>

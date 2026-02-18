@@ -17,7 +17,6 @@ const nextPage =
         href={prevPage}
         class=`paginator__nav ${currentPage <= 1 ? "paginator__nav--disable" : ""}`
     >
-        <i class="fa-solid fa-arrow-left"></i>
         <span>Prev</span>
     </a>
     <span>{currentPage} / {totalPages}</span>
@@ -26,7 +25,6 @@ const nextPage =
         class=`paginator__nav ${currentPage >= totalPages ? "paginator__nav--disable" : ""}`
     >
         <span>Next</span>
-        <i class="fa-solid fa-arrow-right"></i>
     </a>
 </section>
 
