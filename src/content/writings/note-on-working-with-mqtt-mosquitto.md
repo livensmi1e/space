@@ -18,13 +18,13 @@ First prepare compose file:
 
 ```yml
 services:
-    mosquitto-broker:
-        image: eclipse-mosquitto:2.0.21
-        ports:
-            - "1883:1883"
-        volumes:
-            - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
-            - /etc/mosquitto/pwfile:/mosquitto/config/pwfile
+  mosquitto-broker:
+    image: eclipse-mosquitto:2.0.21
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - /etc/mosquitto/pwfile:/mosquitto/config/pwfile
 ```
 
 On the host machine, create password file:

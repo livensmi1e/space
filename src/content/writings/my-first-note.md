@@ -59,3 +59,11 @@ Default blockquote
 > Tip! You can get ISO 8601 datetime by running new Date().toISOString() in the console. Make sure you remove quotes though.
 
 [Test](https://youtube.com)
+
+Inline math: $f(x) = x + 1$
+
+Math block:
+
+$$
+f(x) = x + 1
+$$
