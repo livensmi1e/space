@@ -1,9 +1,9 @@
 ---
-title: "My first step into AWS"
+title: "6 months with AWS"
 date: "2025-09-27"
 time: "20:13 PM"
-description: "This is place where I share my own experience learning AWS. Note that I am not favor of this infra or another like GCP, Azure. I just note for myself (and probably you) on using AWS, things I have learned. Remember that AWS is not something you want to master, it just a tool for us to build things. So don't expect to read this to become AWS architec, all you need to master is the concepts, ideas that you can apply broadly to cloud infrastructure in general."
-tags: ["cloud-infrastructure"]
+description: "For the past 6 months, I have had a chance to learn/work with AWS, my first cloud provider platform. Note that I am not favor of this infra or another like GCP, Azure. I just note for myself (and probably you) on using AWS, things I have learned. I guess the valuable point after reading this article is general concepts, ideas on cloud environments."
+tags: ["cloud"]
 isDraft: true
 ---
 
@@ -50,11 +50,9 @@ sso_region = us-east-1
 sso_registration_scopes = sso:account:access
 ```
 
-After this, we can use `aws sso login --profile profile-name` to request crendentials from IAM Identity Center Server. For me, always there is a browser pops up. Finally, we can use cli to interact with resources.
+After this, we can use `aws sso login --profile profile-name` to request crendentials from IAM Identity Center Server. In this case, `profile-name` can be ommited because of `default`. There is a browser pops up. Finally, I can use CLI to interact with resources.
 
-**Long/short-term crendentials**
-
-Not experience yet :)
+**Long/short-term crendentials:** Not experience yet :)
 
 Useful resources:
 
@@ -63,7 +61,7 @@ Useful resources:
 
 ## IAM
 
-I understand like this:
+My understandings:
 
 - There are concepts of `identity` (User, Role, Account) and `resource` (S3, Lambda Function,...)
 - A policy is a statement that define: **who (identity)** can do **which (action)** to **what (resource)**.
