@@ -40,7 +40,7 @@ if (currentPage < 1 || currentPage > totalPages) {
             <>
                 <PostPreview
                     slug={writing.id}
-                    title={(writing.data.isDraft ? "[Draft] " : "") + writing.data.title}
+                    title={(writing.data.isDraft ? "[wip] " : "") + writing.data.title}
                     date={writing.data.date}
                     time={writing.data.time}
                     desc={writing.data.description}

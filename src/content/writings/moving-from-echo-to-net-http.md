@@ -143,7 +143,13 @@ func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
 }
 ```
 
-## Future work
+## Future learnings
 
 I would like to spend more time reading the internal code of this package as there is so much thing to learn. Understand even just the logic of the multiplexer is a wonderful achievement for me :)
 
+## Resources
+
+I myself should read these articles:
+- https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/
+- https://blog.birdor.com/go-net-http-internals-deep-dive/
+- https://deepwiki.com/cloudflare/go/5.1-http-client-and-server
