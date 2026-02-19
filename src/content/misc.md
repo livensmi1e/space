@@ -10,4 +10,17 @@
 
 **Articles**
 
-**Open Sources**
+**Do Me**
+
+Open source projects I find interesting and worth spending time reading, exploring.
+
+- https://github.com/FiloSottile/whoami.filippo.io
+- https://github.com/maaslalani/gambit
+- https://github.com/awslabs/diagram-as-code
+- https://github.com/charm-and-friends/kancli
+- https://github.com/ondrajz/go-callvis
+- https://github.com/golang/playground
+- https://github.com/Broderick-Westrope/tetrigo
+- https://github.com/aaronbittel/terminal-algorithm-visualizer
+- https://github.com/FlorianWoelki/uber-movement-speed
+- https://github.com/casbin/casbin
