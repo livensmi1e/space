@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/Base.astro";
+import IdeasContent from "../../content/ideas.md";
+import Markdown from "../../components/Markdown.astro";
+---
+
+<BaseLayout>
+    <div class="content">
+        <h2 class="title">Ideas</h2>
+        <div class="markdown">
+            <Markdown>
+                <IdeasContent/>
+            </Markdown>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .content {
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+    .title {
+        margin-bottom: var(--spacing-lg);
+    }
+    .desc {
+        margin-bottom: var(--spacing-xxs);
+    }
+</style>
