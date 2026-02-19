@@ -1,1 +1,3 @@
 I put my ideas on here.
+
+I always want to code something that related to math/physics. One day, I came up with the idea of creating a *terminal based game of badminton and billiards*. I realized that these two games have a lot of physics problem to deal with, and also are perfectly suitable for me, well, because these are the only 2 games that I have fun playing up to the time writing this, true story :)
