@@ -9,12 +9,6 @@ const imagesImportFns = import.meta.glob<{default: ImageMetadata}>(
 );
 const imagePaths = Object.keys(imagesImportFns).filter((imagePath) => {
     return imagePath.startsWith(`/src/assets/gallery/${imageFolder}`)
-}).sort((a, b) => {
-    const getNumber = (path: string) => {
-      const match = path.match(/(\d+)/);
-      return match ? parseInt(match[1], 10) : 0;
-    };
-    return getNumber(a) - getNumber(b);
 });
 ---
 
